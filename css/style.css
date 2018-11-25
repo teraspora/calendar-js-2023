@@ -1,4 +1,23 @@
-.month {
+* {
+	font-family: sans-serif;
+}
+
+.dates {
 	display: grid;
-	grid-template-columns: 
+	grid-template-columns: repeat(7, 11vw);
+	grid-template-rows: repeat(6, 16.667vh);
+	background-color: #ffddbb;
+}
+
+.day {
+	border: 2px solid #cc00ff;
+	text-align: right;
+	font-size: 2vw;
+	color: #666666;
+}
+
+.day-name {
+	text-align: center;
+	color: #0099ee;
+	font-size: 3vw;
 }
