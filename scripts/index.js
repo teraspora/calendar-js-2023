@@ -61,17 +61,22 @@ const months = [
 	}
 ];
 
-let monthNum = 4;
+let monthNum = 9;
 let month = months[monthNum];
 
-document.getElementById("month-name").textContent = month.name;
+document.getElementById("month-name").textContent = `${month.name} 2019`;
 
 for (let dayNum = 1; dayNum <= month.len; dayNum++) {
-	let day = document.querySelectorAll(".day")[dayNum + month.starts - 1];
+	let boxNum = dayNum + month.starts - 1;
+	let day = document.querySelectorAll(".day")[boxNum];
 	day.textContent = dayNum;
 	let r = 255 - Math.floor(Math.random() * 96);
-	let g = 255 - Math.floor(Math.random() * 96);
+	let g = 255 - Math.floor(Math.random() * 128);
 	let b = 255 - Math.floor(Math.random() * 96);
+	let dayOfWeekNum = boxNum % 7;
+	if (dayOfWeekNum == 5 || dayOfWeekNum == 6) {
+		[g, b] = [g-96, b-96];
+	}
 
 	day.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 }
