@@ -61,11 +61,24 @@ const months = [
 	}
 ];
 
-let monthNum = 2;
+let monthNum = 4;
 let month = months[monthNum];
 
 document.getElementById("month-name").textContent = month.name;
 
 for (let dayNum = 1; dayNum <= month.len; dayNum++) {
-	document.querySelectorAll(".day")[dayNum + month.starts - 1].textContent = dayNum;
+	let day = document.querySelectorAll(".day")[dayNum + month.starts - 1];
+	day.textContent = dayNum;
+	let r = 255 - Math.floor(Math.random() * 96);
+	let g = 255 - Math.floor(Math.random() * 96);
+	let b = 255 - Math.floor(Math.random() * 96);
+
+	day.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+}
+
+for (let boxNum = 0; boxNum < 35; boxNum++) {
+	let box = document.querySelectorAll(".day")[boxNum];
+	if (box.textContent.trim() == "") {
+		box.style.borderStyle = "none";
+	}
 }

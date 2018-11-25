@@ -1,19 +1,23 @@
 * {
 	font-family: sans-serif;
+	background-color: #000000;
 }
 
+h1 {
+	color: #ff5500;
+}
 .dates {
 	display: grid;
 	grid-template-columns: repeat(7, 11vw);
 	grid-template-rows: repeat(6, 16.667vh);
-	background-color: #ffddbb;
 }
 
 .day {
 	border: 2px solid #cc00ff;
+	border-radius: 10%;
 	text-align: right;
 	font-size: 2vw;
-	color: #666666;
+	color: #000000;
 }
 
 .day-name {
