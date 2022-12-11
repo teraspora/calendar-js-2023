@@ -6,34 +6,29 @@
     margin: 0;
 }
 
-body {
-
-}
-
 .month {
 	display: grid;
-	padding: 20px;
-	grid-template-columns: 77vw 23vw;
-	grid-template-rows: 12vh 88vh;
-
+	padding: 0 1vw 1vh 1vw;
+	grid-template-columns: 100vw;
+	grid-template-rows: 6vh 94vh;
+	margin-left: 2vw;
 }
 
-h1 {
+#month-name {
 	color: #e22255;
-	font-size: 4vw;
-	/*font-weight:normal;*/
+	font-size: 2vw;
+	justify-self: center;
+	padding-top: 2vh;
 	text-shadow: -1px -1px #0099ee, 
                 -2px -2px #000000, 
                 -3px -3px #0099ee;
-	grid-column-start: 1;
-	grid-column-end: -2;
-	grid-row-start: 1;
-	grid-row-end: 2;
+	font-style: italic;
 }
+
 .dates {
 	display: grid;
-	grid-template-columns: repeat(7, 10vw);
-	grid-template-rows: 10vh repeat(5, 12vh);
+	grid-template-columns: repeat(7, 13vw);
+	grid-template-rows: 10vh repeat(7, 12vh);
 	grid-column-start: 1;
 	grid-column-end: -2;
 	grid-row-start: 2;
@@ -43,9 +38,9 @@ h1 {
 
 .day-name {
 	text-align: center;
-	align-self: end;
+	align-self: center;
 	color: #0099ee;
-	font-size: 3vw;/*
+	font-size: 2vw;/*
 	border: 1px solid white;*/
 }
 
@@ -53,19 +48,13 @@ h1 {
 	border: 1px solid #0099ff;
 	border-radius: 7%;
 	text-align: right;
-	font-size: 2vw;
+	font-size: 1.2vw;
+	font-weight: bold;
 	color: #000000;
+	padding: 3px 5px 0 0;
 }
 
 #notes {
-	background-image: url("../images/test_image.png");
-    background-size: cover;
-    background-position: center;
-    margin-left: 0vw;
-	margin-right: 6vw;
-	margin-bottom: 4vw;
-	border: 5px ridge #0099ee;
-	border-radius: 50%;
 	grid-column-start: 2;
 	grid-column-end: -1;
 	grid-row-start: 1;
